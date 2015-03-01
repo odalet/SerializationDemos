@@ -1,0 +1,14 @@
+package io.delta;
+
+option java_package = "io.delta.beans.generated";
+option java_outer_classname = "ProtobufCity";
+
+option optimize_for = SPEED;
+
+message City {
+	optional int64 id = 1;
+	required string name = 2;
+	required string countryCode = 3;
+ 	required bool enabled = 4;
+ 	required int32 displayOrder = 5;
+}
