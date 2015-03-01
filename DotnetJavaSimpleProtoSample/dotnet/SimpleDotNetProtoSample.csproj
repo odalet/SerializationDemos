@@ -38,8 +38,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityEditor.cs">
@@ -51,6 +53,12 @@
     <Compile Include="Generated\CSharpOptions.cs" />
     <Compile Include="Generated\DescriptorProtoFile.cs" />
     <Compile Include="Generated\ProtobufCity.cs" />
+    <Compile Include="ListSampleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListSampleControl.Designer.cs">
+      <DependentUpon>ListSampleControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CityEditor.resx">
       <DependentUpon>CityEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListSampleControl.resx">
+      <DependentUpon>ListSampleControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

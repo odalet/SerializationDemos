@@ -17,3 +17,7 @@ message City {
  	required bool enabled = 4 [(google.protobuf.csharp_field_options).property_name = "Enabled"];
  	required int32 displayOrder = 5 [(google.protobuf.csharp_field_options).property_name = "DisplayOrder"];
 }
+
+message CityCollection {
+	repeated City items = 1 [(google.protobuf.csharp_field_options).property_name = "Items"];
+}

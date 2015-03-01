@@ -67,9 +67,11 @@
             // 
             // nameBox
             // 
+            this.nameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nameBox.Location = new System.Drawing.Point(82, 29);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(120, 20);
+            this.nameBox.Size = new System.Drawing.Size(193, 20);
             this.nameBox.TabIndex = 2;
             // 
             // isEnabledBox
@@ -84,9 +86,11 @@
             // 
             // displayOrderBox
             // 
+            this.displayOrderBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.displayOrderBox.Location = new System.Drawing.Point(82, 104);
             this.displayOrderBox.Name = "displayOrderBox";
-            this.displayOrderBox.Size = new System.Drawing.Size(120, 20);
+            this.displayOrderBox.Size = new System.Drawing.Size(193, 20);
             this.displayOrderBox.TabIndex = 7;
             // 
             // label3
@@ -100,9 +104,11 @@
             // 
             // idBox
             // 
+            this.idBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.idBox.Location = new System.Drawing.Point(82, 3);
             this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(120, 20);
+            this.idBox.Size = new System.Drawing.Size(193, 20);
             this.idBox.TabIndex = 0;
             // 
             // CityEditor
@@ -118,7 +124,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "CityEditor";
-            this.Size = new System.Drawing.Size(211, 130);
+            this.Size = new System.Drawing.Size(278, 130);
             ((System.ComponentModel.ISupportInitialize)(this.displayOrderBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idBox)).EndInit();
             this.ResumeLayout(false);
