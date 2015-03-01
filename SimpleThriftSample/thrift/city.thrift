@@ -1,4 +1,4 @@
-namespace java io.delta.beans.proto.generated
+namespace java io.delta.beans.thrift.generated
 namespace csharp io.delta
 
 struct City {
