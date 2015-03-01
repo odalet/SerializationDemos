@@ -8,3 +8,7 @@ struct City {
  	4: required bool enabled;
  	5: required i32 displayOrder;
 }
+
+struct CityCollection {
+	1: required list<City> items;
+}

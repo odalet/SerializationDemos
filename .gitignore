@@ -1,6 +1,11 @@
 csharp-output
-
 java-output
-/DotnetJavaSimpleThriftSample/dotnet/SimpleDotNetThriftSample.csproj.user
+*.user
+*.suo
+*.cache
+/DotnetJavaSimpleProtoSample/dotnet/bin/Debug
+/DotnetJavaSimpleProtoSample/dotnet/obj/Debug
+/DotnetJavaSimpleProtoSample/dotnet/Generated
+/DotnetJavaSimpleThriftSample/dotnet/Generated
 
-/DotnetJavaSimpleThriftSample/dotnet/*.suo
+/SimpleThriftSample/doc
