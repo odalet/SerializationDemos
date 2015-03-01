@@ -1,6 +1,6 @@
 package io.delta;
 
-option java_package = "io.delta.beans.generated";
+option java_package = "io.delta.beans.proto.generated";
 option java_outer_classname = "ProtobufCity";
 
 option optimize_for = SPEED;
