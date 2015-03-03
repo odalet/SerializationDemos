@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.delta.io/Api/" name="Api" targetNamespace="http://www.delta.io/Api/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://www.delta.io/Api/">
+      <xsd:element name="searchCitiesRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element xmime:expectedContentTypes="application/octet-stream" minOccurs="0" maxOccurs="1" name="in" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="searchCitiesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element xmime:expectedContentTypes="application/octet-stream" minOccurs="0" maxOccurs="1" name="out" type="xsd:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="searchCitiesRequest">
+    <wsdl:part name="parameters" element="tns:searchCitiesRequest" />
+  </wsdl:message>
+  <wsdl:message name="searchCitiesResponse">
+    <wsdl:part name="parameters" element="tns:searchCitiesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Api">
+    <wsdl:operation name="searchCities">
+      <wsdl:input message="tns:searchCitiesRequest" />
+      <wsdl:output message="tns:searchCitiesResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ApiSOAP" type="tns:Api">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="searchCities">
+      <soap:operation soapAction="http://www.delta.io/Api/searchCities" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Api">
+    <wsdl:port name="ApiSOAP" binding="tns:ApiSOAP">
+      <soap:address location="http://localhost:8080/pb-server/services/ApiSOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
