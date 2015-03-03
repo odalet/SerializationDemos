@@ -89,6 +89,11 @@
             this.displayOrderBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.displayOrderBox.Location = new System.Drawing.Point(82, 104);
+            this.displayOrderBox.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.displayOrderBox.Name = "displayOrderBox";
             this.displayOrderBox.Size = new System.Drawing.Size(193, 20);
             this.displayOrderBox.TabIndex = 7;

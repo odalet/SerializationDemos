@@ -13,35 +13,35 @@ namespace ProtoSample
             InitializeComponent();
         }
 
-        internal void Clear() 
+        internal void Clear()
         {
             idBox.Value = 0M;
             nameBox.Text = string.Empty;
             ccBox.Text = string.Empty;
             isEnabledBox.Checked = false;
-            displayOrderBox.Value = 0M;
+            displayOrderBox.Value = -10M;
         }
 
         internal void Load(City city)
         {
-            idBox.Value = city.HasId ? (decimal)city.Id : 0M;
+            idBox.Value = (decimal)city.Id;
             nameBox.Text = city.Name;
             ccBox.Text = city.CountryCode;
             isEnabledBox.Checked = city.Enabled;
-            displayOrderBox.Value = (decimal)city.DisplayOrder;
+            displayOrderBox.Value = city.HasDisplayOrder ? (decimal)city.DisplayOrder : 0M;
         }
 
         internal City Save()
         {
             var builder = City.CreateBuilder();
 
-            if (idBox.Value <= 0M)
-                builder.ClearId();
-            else builder.Id = (long)idBox.Value;
+            builder.Id = (long)idBox.Value;
             builder.Name = nameBox.Text ?? string.Empty;
             builder.CountryCode = ccBox.Text ?? string.Empty;
             builder.Enabled = isEnabledBox.Checked;
-            builder.DisplayOrder = (int)displayOrderBox.Value;
+            if (displayOrderBox.Value <= 0M)
+                builder.ClearDisplayOrder();
+            else builder.DisplayOrder = (int)displayOrderBox.Value;
 
             return builder.Build();
         }
