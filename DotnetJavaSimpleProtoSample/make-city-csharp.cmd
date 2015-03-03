@@ -10,7 +10,7 @@ echo Cleaning or creating output directory
 if not exist "%outdir%\" (
 	mkdir "%outdir%\"
 ) else (
-	del /F /Q "%outdir%\*.*"
+	del /F /Q "%outdir%\*.cs"
 )
 
 "%~dp0..\bin\protobuf\protogen.exe" --proto_path="%indir%" -output_directory="%outdir%" "%indir%\descriptor.proto" "%indir%\csharp_options.proto" "%indir%\city.proto"
