@@ -10,7 +10,7 @@ echo Cleaning output directory
 if not exist "%outdir%\" (
 	mkdir "%outdir%\"
 ) else (
-	del /S /F /Q "%outdir%\*.java"
+	del /S /F /Q "%outdir%\io\delta\proto\generated\*.java"
 )
 
 "%~dp0..\bin\protobuf\protoc.exe" --proto_path="%indir%" --java_out="%outdir%" %indir%\city.proto %indir%\csharp_options.proto %indir%\descriptor.proto
