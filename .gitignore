@@ -8,7 +8,7 @@
 
 /ClientServerProtoSample/java/.metadata
 /ClientServerProtoSample/java/pb-server/build
-/ClientServerProtoSample/java/pb-server/src/io/delta/proto/generated
+/ClientServerProtoSample/java/pb-server/src/io/delta/proto/generated/*.java
 
 /SimpleDotnetProtoSample/dotnet/bin
 /SimpleDotnetProtoSample/dotnet/obj
